@@ -1,0 +1,31 @@
+Red Apple Creative
+Freelance Front End Developer Test
+--------------------------------------
+
+Our graphic designers have designed a new microsite for Norwegian Air. One of our developers has already started working on the functionality and built the panel-selectors component but it has no styling. You cannot edit panel-selector’s code - the challenge is to style it semantically only using the class names and markup provided. Feel free to use a framework that allows semantic building, like Zurb Foundation 6 (or just write the CSS from scratch). You have to lay out the rest of the HTML and page yourself (header, introduction, footer).
+
+Requirements:
+1. Build it like a responsive Single Page Application (single HTML file).
+2. Don’t worry about functionality - your task is to style the page.
+3. You cannot edit the panel-selector HTML markup provided.
+4. You have to write the HTML markup and class names for the rest of the page yourself.
+5. Feel free to use a framework/starter that you normally use, the only limitation is that you cannot edit the panel-selector component’s markup.
+6. Style it as closely to the design as possible.
+
+We've supplied:
+1. WebsiteCopy.txt for website content, so you can copy and paste the text.
+2. Mockups for desktop & mobile/tablet.
+2. Background images.
+3. Fonts.
+4. Norwegian Air Logo
+5. Footer icons.
+6. Icons for the buttons.
+
+You only have 2 hours for the test which may not be enough to finish the build but we want to see at least fully styled panel-selector component. Focus on what you do best but make sure that you’ll present all of the skills below:
+
+1. CSS3
+2. Attention to detail
+3. Well structured, logical code
+
+On completion, please send us:
+1. The website in a zip file.
