@@ -1,3 +1,8 @@
+body {
+  background: #6793ac url(/img/background1.jpg) no-repeat top center;
+  background-size: cover;
+  color: #FFFFFF; }
+
 #header {
   width: 100%;
   background-color: #f0293c; }
@@ -5,3 +10,20 @@
 #footer {
   width: 100%;
   background-color: #f0293c; }
+
+.panel-selectors__button {
+  display: inline-block;
+  margin: 10px 0;
+  width: 150px;
+  height: 150px; }
+  .panel-selectors__button .selector--title {
+    width: 150px;
+    height: 150px;
+    background-color: #FFFFFF;
+    color: #f0293c;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 5px solid #f0293c; }
+  .panel-selectors__button .selector {
+    background-color: #f0293c; }
