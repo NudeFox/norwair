@@ -79,7 +79,7 @@ a {
   color: #FFFFFF; }
 
 #wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative; }
 
 #content {
@@ -108,7 +108,6 @@ a {
   margin: 1.25rem auto; }
 
 #footer {
-  height: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -139,39 +138,41 @@ a {
   font-size: 0.6875rem;
   padding: 1.25rem 0; }
 
+@media screen and (min-width: 48em) {
+  .footer-share {
+    width: 25%;
+    order: 1; }
+  .footer-music-by {
+    width: 25%;
+    order: 3; }
+  .footer-links {
+    width: 50%;
+    order: 2;
+    padding: 0; } }
+
 .panel-selectors {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  font-size: 0;
   padding: 0.3125rem 0.9375rem; }
 
 .panel-selectors__button {
-  flex: auto;
+  display: inline-block;
   width: 50%;
-  padding: 5px; }
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 9.0625rem;
+  min-height: 9.0625rem;
+  max-width: 15.3125rem;
+  max-height: 15.3125rem; }
   .panel-selectors__button .selector--title {
     text-align: center;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    min-width: 9.0625rem;
-    min-height: 9.0625rem;
-    max-width: 15.3125rem;
-    max-height: 15.3125rem;
     padding: 1.25rem 1rem 1rem;
     border: 5px solid #f0293c;
     background-color: #FFFFFF; }
   .panel-selectors__button .selector {
     background-color: #f0293c;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    min-width: 9.0625rem;
-    min-height: 9.0625rem;
-    max-width: 15.3125rem;
-    max-height: 15.3125rem;
     padding: 0.625rem; }
     .panel-selectors__button .selector hr {
       margin: 1rem auto 0.5rem;

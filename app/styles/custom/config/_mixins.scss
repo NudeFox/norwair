@@ -1,5 +1,26 @@
 @import "variables";
 
+@mixin sm() {
+  @media screen and (min-width: $sm-min-width) {
+    @content;
+  }
+}
+@mixin md() {
+  @media screen and (min-width: $md-min-width) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media screen and (min-width: $lg-min-width) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media screen and (min-width: $xl-min-width) {
+    @content;
+  }
+}
+
 @function px-to-rem($px) {
   @return $px / 16px * 1rem;
 }

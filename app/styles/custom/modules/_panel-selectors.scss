@@ -3,27 +3,27 @@
 $box-params-sm: px-to-rem(145px);
 
 .panel-selectors {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  font-size: 0;
+  //display: flex;
+  //-webkit-flex-direction: row;
+  //flex-direction: row;
+  //flex-wrap: wrap;
   padding: px-to-rem(5px) px-to-rem(15px);
 }
 .panel-selectors__button {
-  flex: auto;
+  display: inline-block;
   width: 50%;
   padding: 5px;
+  @include box();
   .selector--title {
     text-align: center;
-    @include box();
     padding: 1.25rem 1rem 1rem;
     border: 5px solid $red;
     background-color: $white;
   }
   .selector {
     background-color: $red;
-    @include box();
     padding: px-to-rem(10px);
     hr {
       margin: 1rem auto 0.5rem;
