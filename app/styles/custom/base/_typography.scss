@@ -1,0 +1,39 @@
+@import "../config";
+
+@font-face {
+  src: url('../fonts/Paragraph/ApercuPro.eot');
+  src: url('../fonts/Paragraph/ApercuPro.eot?#ie') format('embedded-opentype'),
+  url('../fonts/Paragraph/ApercuPro.woff') format("woff");
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url('../fonts/Header/ApercuPro-Bold.eot');
+  src: url('../fonts/Header/ApercuPro-Bold.eot?#ie') format('embedded-opentype'),
+  url('../fonts/Header/ApercuPro-Bold.woff') format("woff");
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: bold;
+}
+
+html, body, a {
+  font-family: $primary-font;
+}
+
+h1 {
+  @include font($size: $font-gigantic, $line: 1.2, $weight: 600);
+}
+h2 {
+  @include font($size: $font-huge, $line: 1.2, $weight: 600);
+}
+h3 {
+  @include font($size: $font-larger, $line: 1.33, $weight: 600);
+}
+h5 {
+  @include font($size: $font-large, $line: 1.33);
+}
+p{
+  @include font($size: $font-normal, $line: 1.5);
+}

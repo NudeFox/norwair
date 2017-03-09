@@ -1,0 +1,33 @@
+@import "../config";
+
+#footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: px-to-rem(30px);
+  padding-top: px-to-rem(20px);
+  width: 100%;
+  background-color: $red;
+  color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-share {
+  width: 40%;
+  order: 1;
+  font-size: $font-little;
+}
+
+.footer-music-by {
+  width: 40%;
+  order: 2;
+  font-size: $font-little;
+}
+
+.footer-links {
+  width: 100%;
+  order: 3;
+  font-size: px-to-rem(11px);
+  padding: px-to-rem(20px) 0;
+}

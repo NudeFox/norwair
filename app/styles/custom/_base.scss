@@ -1,37 +1,13 @@
 @import "config";
 
+@import "base/typography";
+
 body {
   background: $light-blue url(/img/background1.jpg) no-repeat top center;
   background-size: cover;
-  color: $white;
 }
-#header {
-  width: 100%;
-  background-color: $red;
-}
-#footer {
-  width: 100%;
-  background-color: $red;
-}
-.header-logo{
 
-}
-.panel-selectors__button {
-  display: inline-block;
-  margin: 10px 0;
-  width: 150px;
-  height: 150px;
-  .selector--title {
-    width: 150px;
-    height: 150px;
-    background-color: $white;
-    color: $red;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 5px solid $red;
-  }
-  .selector {
-    background-color: $red;
-  }
+a {
+  text-decoration: underline;
+  color: $white;
 }
