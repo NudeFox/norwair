@@ -1,22 +1,36 @@
 @import "../config";
 
+$box-params-sm: px-to-rem(145px);
+
+.panel-selectors {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: px-to-rem(5px) px-to-rem(15px);
+}
 .panel-selectors__button {
-  display: inline-block;
-  margin: px-to-rem(10px) 0;
-  width: px-to-rem(150px);
-  height: px-to-rem(150px);
+  flex: auto;
+  width: 50%;
+  padding: 5px;
   .selector--title {
-    width: px-to-rem(150px);
-    height: px-to-rem(150px);
-    background-color: $white;
-    color: $red;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    text-align: center;
+    @include box();
+    padding: 1.25rem 1rem 1rem;
     border: 5px solid $red;
+    background-color: $white;
   }
   .selector {
     background-color: $red;
+    @include box();
     padding: px-to-rem(10px);
+    hr {
+      margin: 1rem auto 0.5rem;
+      border-bottom: 5px solid $white;
+    }
+    p {
+      margin-bottom: 0;
+    }
   }
 }

@@ -5,9 +5,20 @@
 body {
   background: $light-blue url(/img/background1.jpg) no-repeat top center;
   background-size: cover;
+  min-width: 380px;
 }
 
 a {
   text-decoration: underline;
   color: $white;
+}
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+#content {
+  padding-bottom: 100px;
+}
+.content-text {
+  margin-top: px-to-rem(25px);
 }

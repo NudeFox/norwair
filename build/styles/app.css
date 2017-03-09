@@ -1,14 +1,21 @@
 @font-face {
+  src: url("../fonts/Header/ApercuPro-Bold.eot");
+  src: url("../fonts/Header/ApercuPro-Bold.eot?#ie") format("embedded-opentype"), url("../fonts/Header/ApercuPro-Bold.woff") format("woff");
+  font-family: "Apercu Pro";
+  font-style: normal;
+  font-weight: 500; }
+
+@font-face {
   src: url("../fonts/Paragraph/ApercuPro.eot");
   src: url("../fonts/Paragraph/ApercuPro.eot?#ie") format("embedded-opentype"), url("../fonts/Paragraph/ApercuPro.woff") format("woff");
-  font-family: "Apercu Pro", sans-serif;
+  font-family: "Apercu Pro";
   font-style: normal;
-  font-weight: normal; }
+  font-weight: 400; }
 
 @font-face {
   src: url("../fonts/Header/ApercuPro-Bold.eot");
   src: url("../fonts/Header/ApercuPro-Bold.eot?#ie") format("embedded-opentype"), url("../fonts/Header/ApercuPro-Bold.woff") format("woff");
-  font-family: "Apercu Pro", sans-serif;
+  font-family: "Apercu Pro";
   font-style: normal;
   font-weight: bold; }
 
@@ -17,10 +24,11 @@ html, body, a {
 
 h1 {
   font-family: "Apercu Pro", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.125rem;
   line-height: 1.2;
   font-weight: 600;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  letter-spacing: 1px; }
 
 h2 {
   font-family: "Apercu Pro", sans-serif;
@@ -40,23 +48,45 @@ h5 {
   font-family: "Apercu Pro", sans-serif;
   font-size: 1.125rem;
   line-height: 1.33;
-  font-weight: 400;
+  font-weight: 500;
   color: #FFFFFF; }
 
 p {
   font-family: "Apercu Pro", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 400;
   color: #FFFFFF; }
 
+.content-text p {
+  font-family: "Apercu Pro", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #FFFFFF; }
+
+.selector--title h5 {
+  text-transform: uppercase;
+  color: #f0293c; }
+
 body {
   background: #6793ac url(/img/background1.jpg) no-repeat top center;
-  background-size: cover; }
+  background-size: cover;
+  min-width: 380px; }
 
 a {
   text-decoration: underline;
   color: #FFFFFF; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative; }
+
+#content {
+  padding-bottom: 100px; }
+
+.content-text {
+  margin-top: 1.5625rem; }
 
 .footer-social-icon {
   width: 1.5625rem;
@@ -67,6 +97,9 @@ a {
   width: 5rem;
   margin-left: 0.3125rem; }
 
+.selector--title img {
+  width: 1.875rem; }
+
 #header {
   width: 100%;
   background-color: #f0293c; }
@@ -75,10 +108,13 @@ a {
   margin: 1.25rem auto; }
 
 #footer {
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-top: 1.875rem;
   padding-top: 1.25rem;
   width: 100%;
   background-color: #f0293c;
@@ -103,23 +139,45 @@ a {
   font-size: 0.6875rem;
   padding: 1.25rem 0; }
 
+.panel-selectors {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.3125rem 0.9375rem; }
+
 .panel-selectors__button {
-  display: inline-block;
-  margin: 0.625rem 0;
-  width: 9.375rem;
-  height: 9.375rem; }
+  flex: auto;
+  width: 50%;
+  padding: 5px; }
   .panel-selectors__button .selector--title {
-    width: 9.375rem;
-    height: 9.375rem;
-    background-color: #FFFFFF;
-    color: #f0293c;
+    text-align: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 5px solid #f0293c; }
+    min-width: 9.0625rem;
+    min-height: 9.0625rem;
+    max-width: 15.3125rem;
+    max-height: 15.3125rem;
+    padding: 1.25rem 1rem 1rem;
+    border: 5px solid #f0293c;
+    background-color: #FFFFFF; }
   .panel-selectors__button .selector {
     background-color: #f0293c;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 9.0625rem;
+    min-height: 9.0625rem;
+    max-width: 15.3125rem;
+    max-height: 15.3125rem;
     padding: 0.625rem; }
+    .panel-selectors__button .selector hr {
+      margin: 1rem auto 0.5rem;
+      border-bottom: 5px solid #FFFFFF; }
+    .panel-selectors__button .selector p {
+      margin-bottom: 0; }
 
 .clear:before,
 .clear:after {
@@ -136,12 +194,12 @@ a {
 .text-left {
   text-align: left; }
 
-.text-center {
-  text-align: center; }
-
 .text-right {
   text-align: right; }
 
 .block-centered {
   margin-left: auto;
   margin-right: auto; }
+
+.pd-0 {
+  padding: 0; }

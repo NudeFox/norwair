@@ -19,10 +19,6 @@
   text-align: left;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .text-right {
   text-align: right;
 }
@@ -30,4 +26,7 @@
 .block-centered {
   margin-left: auto;
   margin-right: auto;
+}
+.pd-0 {
+  padding: 0;
 }
