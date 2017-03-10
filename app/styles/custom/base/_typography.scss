@@ -49,9 +49,40 @@ p{
 }
 
 .content-text p{
-  @include font($size: $font-large, $line: 1.8)
+  @include font($size: $font-large, $line: 1.8);
+  text-align: justify;
+}
+.selector {
+  p {
+    margin: 12px 0 0;
+    font-size: .9em;
+  }
 }
 .selector--title h5{
   text-transform: uppercase;
   color: $red;
+}
+.link {
+  font-size: smaller;
+  margin: 1em auto 3em;
+  max-width: 2.4 * $m-selector-width + 4 * $m-selector-padding;
+}
+@include md() {
+  .link {
+    font-size: medium;
+    max-width: 3 * $m-selector-width + 6 * $m-selector-padding;
+    //margin-left: 5px;
+  }
+}
+@include lg() {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.4;
+  }
+  .content-text p{
+    @include font($size: 1.5rem, $line: 1.8);
+    text-align: inherit;
+    letter-spacing: -1px;
+    line-height: 1.5;
+  }
 }

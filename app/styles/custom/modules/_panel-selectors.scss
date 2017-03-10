@@ -1,36 +1,53 @@
 @import "../config";
 
-$box-params-sm: px-to-rem(145px);
-
 .panel-selectors {
-  width: 100%;
-  font-size: 0;
-  //display: flex;
-  //-webkit-flex-direction: row;
-  //flex-direction: row;
-  //flex-wrap: wrap;
-  padding: px-to-rem(5px) px-to-rem(15px);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  color: white;
+  margin: 0 auto;
+  max-width: 2 * $m-selector-width + 4 * $m-selector-padding;
 }
+
 .panel-selectors__button {
-  display: inline-block;
+  box-sizing: border-box;
+  display: flex;
   width: 50%;
+  padding: $m-selector-padding;
+  background: $red;
+  background-clip: content-box;
+}
+
+.selector {
   padding: 5px;
-  @include box();
-  .selector--title {
-    text-align: center;
-    padding: 1.25rem 1rem 1rem;
-    border: 5px solid $red;
-    background-color: $white;
+  border: 5px solid $red;
+  hr {
+    border: none;
+    border-top: 5px solid white;
   }
-  .selector {
-    background-color: $red;
-    padding: px-to-rem(10px);
-    hr {
-      margin: 1rem auto 0.5rem;
-      border-bottom: 5px solid $white;
-    }
-    p {
-      margin-bottom: 0;
-    }
+}
+
+.selector--title {
+  width: 100%;
+  padding: 5px;
+  border: 5px solid $red;
+  text-align: center;
+  background: white;
+  color: $red;
+
+  h5 {
+    margin: 16px 0;
+    font-size: 1em;
+  }
+}
+
+@include md() {
+  .panel-selectors {
+    max-width: 3 * $m-selector-width + 6 * $m-selector-padding;
+    //margin-left: 0;
+  }
+
+  .panel-selectors__button {
+    width: 33.333%;
   }
 }

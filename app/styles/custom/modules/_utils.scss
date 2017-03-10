@@ -7,6 +7,10 @@
   clear: both;
 }
 
+.inline {
+  display: inline-block;
+}
+
 .pull-right {
   float: right;
 }
@@ -30,3 +34,15 @@
 .pd-0 {
   padding: 0;
 }
+
+//.valign-center {
+//  position: absolute;
+//  top: 50%;
+//  left: 25%;
+//  > .columns {
+//    transform: translateY(-50%);
+//    -webkit-transform: translateY(-50%);
+//    -o-transform:translateY(-50%);
+//    -ms-transform:translateY(-50%);
+//  }
+//}

@@ -23,3 +23,21 @@ a {
 .content-text {
   margin-top: px-to-rem(25px);
 }
+@include lg() {
+  #content {
+    margin-top: 15%;
+    max-width: 90%;
+  }
+  .content-text {
+    display: inline-block;
+    float: left;
+    margin-top: 0;
+  }
+  .next-line-lg {
+    display: block;
+  }
+  .content-cards {
+    display: inline-block;
+    float: right;
+  }
+}

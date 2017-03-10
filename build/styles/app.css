@@ -63,11 +63,40 @@ p {
   font-size: 1.125rem;
   line-height: 1.8;
   font-weight: 400;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  text-align: justify; }
+
+.selector p {
+  margin: 12px 0 0;
+  font-size: .9em; }
 
 .selector--title h5 {
   text-transform: uppercase;
   color: #f0293c; }
+
+.link {
+  font-size: smaller;
+  margin: 1em auto 3em;
+  max-width: 365.6px; }
+
+@media screen and (min-width: 48em) {
+  .link {
+    font-size: medium;
+    max-width: 462px; } }
+
+@media screen and (min-width: 64em) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.4; }
+  .content-text p {
+    font-family: "Apercu Pro", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: inherit;
+    letter-spacing: -1px;
+    line-height: 1.5; } }
 
 body {
   background: #6793ac url(/img/background1.jpg) no-repeat top center;
@@ -88,6 +117,20 @@ a {
 .content-text {
   margin-top: 1.5625rem; }
 
+@media screen and (min-width: 64em) {
+  #content {
+    margin-top: 15%;
+    max-width: 90%; }
+  .content-text {
+    display: inline-block;
+    float: left;
+    margin-top: 0; }
+  .next-line-lg {
+    display: block; }
+  .content-cards {
+    display: inline-block;
+    float: right; } }
+
 .footer-social-icon {
   width: 1.5625rem;
   margin-left: 0.625rem;
@@ -95,7 +138,7 @@ a {
 
 .spotify-logo {
   width: 5rem;
-  margin-left: 0.3125rem; }
+  margin-left: 0.5625rem; }
 
 .selector--title img {
   width: 1.875rem; }
@@ -139,52 +182,70 @@ a {
   padding: 1.25rem 0; }
 
 @media screen and (min-width: 48em) {
+  #footer {
+    padding: 1rem 0; }
   .footer-share {
-    width: 25%;
-    order: 1; }
+    width: 20%;
+    order: 1;
+    font-size: medium; }
   .footer-music-by {
-    width: 25%;
-    order: 3; }
+    width: 20%;
+    order: 3;
+    font-size: medium; }
   .footer-links {
     width: 50%;
     order: 2;
-    padding: 0; } }
+    padding: 0;
+    font-size: 1rem; } }
 
 .panel-selectors {
-  width: 100%;
-  font-size: 0;
-  padding: 0.3125rem 0.9375rem; }
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  color: white;
+  margin: 0 auto;
+  max-width: 308px; }
 
 .panel-selectors__button {
-  display: inline-block;
+  box-sizing: border-box;
+  display: flex;
   width: 50%;
   padding: 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  min-width: 9.0625rem;
-  min-height: 9.0625rem;
-  max-width: 15.3125rem;
-  max-height: 15.3125rem; }
-  .panel-selectors__button .selector--title {
-    text-align: center;
-    padding: 1.25rem 1rem 1rem;
-    border: 5px solid #f0293c;
-    background-color: #FFFFFF; }
-  .panel-selectors__button .selector {
-    background-color: #f0293c;
-    padding: 0.625rem; }
-    .panel-selectors__button .selector hr {
-      margin: 1rem auto 0.5rem;
-      border-bottom: 5px solid #FFFFFF; }
-    .panel-selectors__button .selector p {
-      margin-bottom: 0; }
+  background: #f0293c;
+  background-clip: content-box; }
+
+.selector {
+  padding: 5px;
+  border: 5px solid #f0293c; }
+  .selector hr {
+    border: none;
+    border-top: 5px solid white; }
+
+.selector--title {
+  width: 100%;
+  padding: 5px;
+  border: 5px solid #f0293c;
+  text-align: center;
+  background: white;
+  color: #f0293c; }
+  .selector--title h5 {
+    margin: 16px 0;
+    font-size: 1em; }
+
+@media screen and (min-width: 48em) {
+  .panel-selectors {
+    max-width: 462px; }
+  .panel-selectors__button {
+    width: 33.333%; } }
 
 .clear:before,
 .clear:after {
   content: "";
   display: block;
   clear: both; }
+
+.inline {
+  display: inline-block; }
 
 .pull-right {
   float: right; }
