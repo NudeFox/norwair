@@ -1,22 +1,7 @@
 @import "../config";
 
-.clear:before,
-.clear:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .inline {
   display: inline-block;
-}
-
-.pull-right {
-  float: right;
-}
-
-.pull-left {
-  float: left;
 }
 
 .text-left {
@@ -27,22 +12,7 @@
   text-align: right;
 }
 
-.block-centered {
+.horizontal-center {
   margin-left: auto;
   margin-right: auto;
 }
-.pd-0 {
-  padding: 0;
-}
-
-//.valign-center {
-//  position: absolute;
-//  top: 50%;
-//  left: 25%;
-//  > .columns {
-//    transform: translateY(-50%);
-//    -webkit-transform: translateY(-50%);
-//    -o-transform:translateY(-50%);
-//    -ms-transform:translateY(-50%);
-//  }
-//}

@@ -1,14 +1,12 @@
 @import "../config";
 
 .footer-social-icon{
-  width: px-to-rem(25px);
-  margin-left: px-to-rem(10px);
-  vertical-align: bottom;
+  width: rem-calc(25);
 }
 .spotify-logo {
-  width: px-to-rem(80px);
-  margin-left: px-to-rem(9px);
+  width: rem-calc(80);
+
 }
 .selector--title img {
-  width: px-to-rem(30px);
+  width: rem-calc(30);
 }

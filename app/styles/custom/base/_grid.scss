@@ -1,0 +1,43 @@
+@import "../config";
+
+#grid-layout {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-row-gap: rem-calc(30);
+  grid-template-areas:
+    "head head head head"
+    " . context panels . "
+    "foot foot foot foot";
+}
+
+.head {
+  grid-area: head;
+  grid-column: 1/span 4;
+  grid-row: 1/2;
+  border: 1px solid black;
+  background: $red;
+}
+
+.content {
+  grid-area: main;
+  grid-column: 1/span4;
+  grid-row: 2/3;
+  border: 1px solid black;
+
+  .content__text {
+    grid-area: context;
+    border: 1px solid red;
+  }
+  .panel-selectors {
+    grid-area: panels;
+  }
+}
+
+.foot {
+  grid-area: foot;
+  grid-column: 1/span 4;
+  grid-row: 3/4;
+  background: $red;
+  border: 1px solid black;
+}

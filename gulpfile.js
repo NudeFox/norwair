@@ -24,13 +24,13 @@ gulp.task("html", function () {
 });
 
 gulp.task("images", function () {
-    return gulp.src("app/img/**/*.{svg,png,jpeg,jpg,gif}")
+    return gulp.src("app/images/**/*.{svg,png,jpeg,jpg,gif}")
         .pipe(gulp.dest(buildRoot + "/img"))
         .pipe(connect.reload());
 });
 
 gulp.task("w:images", ["images"], function () {
-    return gulp.watch("app/img/**/*.{svg,png,jpeg,jpg,gif}", ["images"]);
+    return gulp.watch("app/images/**/*.{svg,png,jpeg,jpg,gif}", ["images"]);
 });
 
 gulp.task("fonts", function () {
