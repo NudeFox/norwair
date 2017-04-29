@@ -1,9 +1,9 @@
 @import "../config";
 
-#header {
+header {
   width: 100%;
   background-color: $red;
 }
 .header-logo{
-  margin: px-to-rem(20px) auto;
+  margin: rem-calc(20) auto;
 }

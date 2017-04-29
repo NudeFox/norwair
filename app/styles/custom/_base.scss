@@ -6,7 +6,6 @@ body {
   background: $light-blue url(/img/background1.jpg) no-repeat top center;
   background-size: cover;
   min-width: 380px;
-  //overflow: hidden;
 }
 
 a {
@@ -17,27 +16,19 @@ a {
   min-height: 100vh;
   position: relative;
 }
-#content {
+.content {
   padding-bottom: 100px;
+
+  @include min-width($laptop) {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 10%;
+  }
 }
 .content-text {
-  margin-top: px-to-rem(25px);
+  margin-top: rem-calc(25);
 }
-@include lg() {
-  #content {
-    margin-top: 15%;
-    max-width: 90%;
-  }
-  .content-text {
-    display: inline-block;
-    float: left;
-    margin-top: 0;
-  }
-  .next-line-lg {
-    display: block;
-  }
-  .content-cards {
-    display: inline-block;
-    float: right;
-  }
-}
+
+

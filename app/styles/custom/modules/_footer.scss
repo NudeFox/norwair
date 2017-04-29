@@ -1,13 +1,13 @@
 @import "../config";
 
-#footer {
+footer {
   position: absolute;
   bottom: 0;
   left: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-top: px-to-rem(20px);
+  padding-top: rem-calc(20);
   width: 100%;
   background-color: $red;
   color: $white;
@@ -15,41 +15,41 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.footer-share {
+.footer__share {
   width: 40%;
   order: 1;
   font-size: $font-little;
 }
 
-.footer-music-by {
+.footer__music-by {
   width: 40%;
   order: 2;
   font-size: $font-little;
 }
 
-.footer-links {
+.footer__links {
   width: 100%;
   order: 3;
-  font-size: px-to-rem(11px);
-  padding: px-to-rem(20px) 0;
+  font-size: rem-calc(11);
+  padding: rem-calc(20) 0;
 }
-@include md {
-  #footer {
+@include min-width($tablet) {
+  footer {
     padding: 1rem 0;
   }
-  .footer-share {
+  .footer__share {
     width: 20%;
     order: 1;
     font-size: medium;
   }
 
-  .footer-music-by {
+  .footer__music-by {
     width: 20%;
     order: 3;
     font-size: medium;
   }
 
-  .footer-links {
+  .footer__links {
     width: 50%;
     order: 2;
     padding: 0;

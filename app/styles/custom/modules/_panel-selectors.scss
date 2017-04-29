@@ -6,14 +6,14 @@
   align-items: stretch;
   color: white;
   margin: 0 auto;
-  max-width: 2 * $m-selector-width + 4 * $m-selector-padding;
+  max-width: 2 * $selector-width + 4 * $selector-padding;
 }
 
 .panel-selectors__button {
   box-sizing: border-box;
   display: flex;
   width: 50%;
-  padding: $m-selector-padding;
+  padding: $selector-padding;
   background: $red;
   background-clip: content-box;
 }
@@ -41,13 +41,38 @@
   }
 }
 
-@include md() {
+@include min-width($tablet) {
   .panel-selectors {
-    max-width: 3 * $m-selector-width + 6 * $m-selector-padding;
-    //margin-left: 0;
+    max-width: 3 * $selector-width + 6 * $selector-padding;
   }
 
   .panel-selectors__button {
     width: 33.333%;
   }
+}
+
+//Experimental grid
+@supports (display: grid) {
+
+  .panel-selectors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    grid-gap: 10px;
+  }
+
+  .panel-selectors__button {
+    width: auto;
+    padding: 0;
+  }
+
+  @include min-width($tablet) {
+    .panel-selectors {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+  }
+
 }

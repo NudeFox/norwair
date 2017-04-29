@@ -1,0 +1,76 @@
+//VARIABLES
+$primary-font: "Apercu Pro", sans-serif;
+
+$sm: 640px;
+$tablet: 768px;
+$tablet-lg: 860px;
+$laptop-sm: 960px;
+$laptop: 1024px;
+$desktop: 1160px;
+$xxl: 1400px;
+$rem-base: 16px;
+
+$font-little: .8125rem;
+$font-small: .875rem;
+$font-normal: 1rem;
+$font-large: 1.125rem;
+$font-larger: 1.5rem;
+$font-huge: 1.875rem;
+$font-gigantic: 2.125rem;
+
+$card-max-width: 150px;
+$card-max-height: 150px;
+
+$selector-width: 144px;
+$selector-padding: 5px;
+
+//COLORS
+$black: #111;
+$red: #f0293c;
+$light-blue: #6793ac;
+$white: #FFFFFF;
+
+//MIXINS
+@mixin min-width ($min) {
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin max-width ($max) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin font-style($family: $primary-font, $size: 1rem, $line: 1.5rem, $weight: 400) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  color: $white;
+}
+
+//FUNCTIONS
+//foundation 6 rem-calc
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1em;
+  @if ($value == 0em) { $value: 0; } // Turn 0em into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
